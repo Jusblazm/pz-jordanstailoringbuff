@@ -1,0 +1,4 @@
+ContextMenu_EN = {
+    ContextMenu_TailoringBuff_Inventory_DyeClothing = "Dye Clothing (Dye Pack)",
+    ContextMenu_TailoringBuff_Inventory_ChangeTexture = "Change Texture (Thread)",
+}

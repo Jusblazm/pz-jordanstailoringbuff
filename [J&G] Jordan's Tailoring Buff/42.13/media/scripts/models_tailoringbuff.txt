@@ -1,0 +1,14 @@
+module Base
+{
+    imports
+    {
+        Base
+    }
+
+    model DyePack_Ground
+    {
+        mesh = WorldItems/BoxOfJars,
+        texture = DyePackTexJars,
+        scale = 0.4,
+    }
+}

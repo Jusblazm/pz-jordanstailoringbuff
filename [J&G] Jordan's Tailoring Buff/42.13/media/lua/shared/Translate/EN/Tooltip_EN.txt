@@ -1,0 +1,4 @@
+Tooltip_EN = {
+    Tooltip_ClothingDye = "You can use this to dye TINTable clothing",
+    Tooltip_TailoringBuff_DyeUI_AcceptButton_NoDye = "You need a dye pack to do this",
+}

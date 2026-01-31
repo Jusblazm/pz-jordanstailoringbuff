@@ -1,0 +1,5 @@
+Sandbox_EN = {
+    Sandbox_TailoringBuff = "Jordan's Tailoring Buff",
+    Sandbox_HackingSkill_RequiredTailoringLevel = "Required Tailoring Level",
+    Sandbox_HackingSkill_RequiredTailoringLevel_tooltip = "Level needed to be able to dye clothing",
+}

@@ -1,0 +1,27 @@
+module Base
+{
+    imports
+    {
+        Base
+    }
+
+    craftRecipe MixDyePack
+    {
+        timedAction     = Making,
+        Time            = 150,
+        Tags            = InHandCraft,
+        SkillRequired   = Tailoring:6,
+        category        = General,
+        xpAward         = Tailoring:3,
+        inputs
+        {
+            item 1 tags[base:mixingutensil] mode:keep,
+            item 1 tags[base:bowl] mode:keep,
+            item 3 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare] mode:destroy,
+        }
+        outputs
+        {
+            item 1 Base.DyePack,
+        }
+    }
+}

@@ -1,0 +1,13 @@
+UI_EN = {
+    UI_TailingBuff_UI_RGB = "RGB (0-255)",
+    UI_TailoringBuff_UI_AcceptButton = "Accept",
+    UI_TailoringBuff_UI_CancelButton = "Cancel",
+
+    UI_TailoringBuff_DyeUI_Title = "Dye Manager",
+
+    UI_TailoringBuff_TextureUI_Title = "Texture Manager",
+
+    UI_TailoringBuff_FavoritesUI_SaveButton = "Save",
+    UI_TailoringBuff_FavoritesUI_DeleteButton = "Delete",
+    UI_TailoringBuff_FavoritesUI_Title = "Favorite Dyes Manager",
+}
