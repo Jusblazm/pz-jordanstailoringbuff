@@ -3,8 +3,8 @@ name: Update Translation Table
 on:
   push:
     paths:
-      - "[J&G] Jordan's Tailoring Buff/42.13/media/lua/shared/Translate/**"
-      - "scripts/update-readme.lua"
+      - '[J&G] Jordan''s Tailoring Buff/42.13/media/lua/shared/Translate/**'
+      - 'scripts/update-readme.lua'
   workflow_dispatch:
 
 jobs:
