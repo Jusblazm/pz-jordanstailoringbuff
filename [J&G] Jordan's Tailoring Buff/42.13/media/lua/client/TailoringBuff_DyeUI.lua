@@ -60,22 +60,6 @@ function TailoringBuff_DyeUI.Window:createChildren()
     self.gEntry = ISTextEntryBox:new("", padding * 2 + boxWidth, y, boxWidth, 20)
     self.bEntry = ISTextEntryBox:new("", padding + (boxWidth + padding) * 2, y, boxWidth, 20)
 
-    -- self.rEntry:initialise()
-    -- self.rEntry:instantiate()
-    -- self.rEntry:setOnlyNumbers(true)
-    -- self.rEntry:setMaxTextLength(3)
-    -- self.gEntry:initialise()
-    -- self.gEntry:instantiate()
-    -- self.gEntry:setOnlyNumbers(true)
-    -- self.gEntry:setMaxTextLength(3)
-    -- self.bEntry:initialise()
-    -- self.bEntry:instantiate()
-    -- self.bEntry:setOnlyNumbers(true)
-    -- self.bEntry:setMaxTextLength(3)
-
-    -- self:addChild(self.rEntry)
-    -- self:addChild(self.gEntry)
-    -- self:addChild(self.bEntry)
     for _, entry in ipairs({ self.rEntry, self.gEntry, self.bEntry }) do
         entry:initialise()
         entry:instantiate()
@@ -122,12 +106,12 @@ function TailoringBuff_DyeUI.Window:createChildren()
     self.closeButton.backgroundColorMouseOver = { r = 1, g = 0, b = 0, a = 0.4 }
     self.closeButton.borderColor = { r = 1, g = 0, b = 0, a = 1 }
 
-    -- self.favoritesButton = ISButton:new(rightX, bottomY, buttonWidth, 25, getText("Favorites"), self, TailoringBuff_FavoritesUI.showUI)
-    -- self.favoritesButton:initialise()
-    -- self:addChild(self.favoritesButton)
-    -- self.favoritesButton.backgroundColor = { r = 0, g = 0, b = 0, a = 1 }
-    -- self.favoritesButton.backgroundColorMouseOver = { r = 0.3, g = 0.3, b = 0.3, a = 1 }
-    -- self.favoritesButton.borderColor = { r = 1, g = 1, b = 1, a = 1 }
+    self.favoritesButton = ISButton:new(rightX, bottomY, buttonWidth, 25, getText("UI_TailoringBuff_UI_FavoritesButton"), self, TailoringBuff_FavoritesUI.showUI)
+    self.favoritesButton:initialise()
+    self:addChild(self.favoritesButton)
+    self.favoritesButton.backgroundColor = { r = 0, g = 0, b = 0, a = 1 }
+    self.favoritesButton.backgroundColorMouseOver = { r = 0.3, g = 0.3, b = 0.3, a = 1 }
+    self.favoritesButton.borderColor = { r = 1, g = 1, b = 1, a = 1 }
 
     local function hookEntry(entry)
         entry.onTextChange = function()
@@ -138,6 +122,21 @@ function TailoringBuff_DyeUI.Window:createChildren()
     hookEntry(self.rEntry)
     hookEntry(self.gEntry)
     hookEntry(self.bEntry)
+end
+
+function TailoringBuff_DyeUI.Window:setColorFromFavorites(rgb)
+    if not rgb then return end
+
+    local r = TailoringBuff_Utils.clampRGB(rgb.r)
+    local g = TailoringBuff_Utils.clampRGB(rgb.g)
+    local b = TailoringBuff_Utils.clampRGB(rgb.b)
+
+    self.rEntry:setText(tostring(r))
+    self.gEntry:setText(tostring(g))
+    self.bEntry:setText(tostring(b))
+
+    local colorInfo = ColorInfo.new(r/255, g/255, b/255, 1)
+    self:setCurrentPreviewColor(colorInfo, false)
 end
 
 function TailoringBuff_DyeUI.Window:updatePreviewFromRGB()

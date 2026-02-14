@@ -5,11 +5,13 @@ TailoringBuff_Utils.FAVORITES_FILE = "favoritergbs.txt"
 TailoringBuff_Utils.PATH = TailoringBuff_Utils.FAVORITES_DIR .. "/" .. TailoringBuff_Utils.FAVORITES_FILE
 
 function TailoringBuff_Utils.ensureFavoritesFile()
-    if not fileExists(TailoringBuff_Utils.PATH) then
-        local writer = getFileWriter(TailoringBuff_Utils.PATH, true, false)
-        writer:write("0,0,0\n")
-        writer:close()
+    if cacheFileExists(TailoringBuff_Utils.PATH) then
+        return
     end
+
+    local writer = getFileWriter(TailoringBuff_Utils.PATH, true, false)
+    writer:write("0,0,0\n")
+    writer:close()
 end
 
 function TailoringBuff_Utils.loadFavoriteColors()
@@ -103,9 +105,6 @@ end
 
 function TailoringBuff_Utils.applyClothingTint(pickedTarget, pickedRGB, mouseUp, player, item)
     if not (item and pickedRGB and player) then return end
-    -- local color = Color.new(pickedRGB.r, pickedRGB.g, pickedRGB.b)
-
-    -- ISTimedActionQueue.add(TailoringBuff_DyeClothingAction:new(player, item, color))
     ISTimedActionQueue.add(TailoringBuff_DyeClothingAction:new(player, item, pickedRGB.r, pickedRGB.g, pickedRGB.b))
 end
 

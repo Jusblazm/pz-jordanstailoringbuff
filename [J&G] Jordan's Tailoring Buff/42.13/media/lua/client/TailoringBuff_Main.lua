@@ -15,6 +15,12 @@ local function onGlobalKeyPressed(key)
         if ui and ui:isVisible() then
             ui:onClose()
         end
+
+        -- close FavoritesUI
+        local ui = TailoringBuff_FavoritesUI.instance
+        if ui and ui:isVisible() then
+            ui:onClose()
+        end
     end
 end
 
