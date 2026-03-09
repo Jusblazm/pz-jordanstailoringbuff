@@ -1,0 +1,19 @@
+module Base
+{
+    imports
+    {
+        Base
+    }
+
+    item DyePack
+    {
+        DisplayCategory = Household,
+        ItemType = base:drainable,
+        Weight = 2,
+        UseWhileEquipped = FALSE,
+        UseDelta = 0.25,
+        Icon = DyePack,
+        WorldStaticModel = DyePack_Ground,
+        Tooltip = Tooltip_ClothingDye,
+    }
+}
