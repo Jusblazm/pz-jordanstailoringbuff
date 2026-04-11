@@ -1,5 +1,5 @@
 UI_EN = {
-    UI_TailingBuff_UI_RGB = "RGB (0-255)",
+    UI_TailoringBuff_UI_RGB = "RGB (0-255)",
     UI_TailoringBuff_UI_AcceptButton = "Accept",
     UI_TailoringBuff_UI_CancelButton = "Cancel",
     UI_TailoringBuff_UI_FavoritesButton = "Favorites",

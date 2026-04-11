@@ -49,7 +49,7 @@ function TailoringBuff_DyeUI.Window:createChildren()
     local padding = 10
     local y = 35
 
-    self.rgbLabel = ISLabel:new(padding, y, 20, getText("UI_TailingBuff_UI_RGB"), 1, 1, 1, 1, UIFont.Small, true)
+    self.rgbLabel = ISLabel:new(padding, y, 20, getText("UI_TailoringBuff_UI_RGB"), 1, 1, 1, 1, UIFont.Small, true)
     self:addChild(self.rgbLabel)
 
     y = y + 25
