@@ -1,3 +1,0 @@
-Recipe_EN = {
-    Recipe_MixDyePack = "Mix clothing dye pack",
-}
