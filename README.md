@@ -46,7 +46,7 @@ In build 42, there is a sandbox setting that allows you to set the required tail
 <!-- AUTO-GENERATED-TABLE:END -->
 
 ### Translation Notice
-Translations are provided by AI for your benefit. There are bound to be some errors. If you would like to contribiute, please reach out to me; I will happily replace AI-generated translations.
+Translations are provided by AI for your benefit. There are bound to be some errors. If you would like to contribute, please reach out to me; I will happily replace AI-generated translations.
 
 ## Support
 Join Jordanal's support server at: https://discord.gg/Sx3xzFXQZc \
