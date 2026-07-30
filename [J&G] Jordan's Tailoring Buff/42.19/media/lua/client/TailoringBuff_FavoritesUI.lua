@@ -25,7 +25,7 @@ function TailoringBuff_FavoritesUI.RGBModule:createChildren()
     local y = 5
     local boxWidth = 40
 
-    self.rgbLabel = ISLabel:new(padding, y, 20, getText("UI_TailingBuff_UI_RGB"), 1, 1, 1, 1, UIFont.Small, true)
+    self.rgbLabel = ISLabel:new(padding, y, 20, getText("UI_TailoringBuff_UI_RGB"), 1, 1, 1, 1, UIFont.Small, true)
     self:addChild(self.rgbLabel)
 
     y = y + 20

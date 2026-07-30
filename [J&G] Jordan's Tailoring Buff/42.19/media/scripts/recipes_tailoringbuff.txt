@@ -11,7 +11,7 @@ module Base
         Time            = 150,
         Tags            = InHandCraft,
         SkillRequired   = Tailoring:6,
-        category        = General,
+        category        = Tailoring,
         xpAward         = Tailoring:3,
         inputs
         {
