@@ -79,12 +79,16 @@ function TailoringBuff_Utils.hasThread(player)
     return player:getInventory():containsTypeRecurse("Thread")
 end
 
-function TailoringBuff_Utils.hasTailoringLevel(player)
+function TailoringBuff_Utils.getTailoringLevel()
     local requiredLevel = 6
     if SandboxVars.TailoringBuff and SandboxVars.TailoringBuff.RequiredTailoringLevel then
         requiredLevel = SandboxVars.TailoringBuff.RequiredTailoringLevel
     end
-    return player:getPerkLevel(Perks.Tailoring) >= requiredLevel
+    return requiredLevel
+end
+
+function TailoringBuff_Utils.hasTailoringLevel(player)
+    return player:getPerkLevel(Perks.Tailoring) >= TailoringBuff_Utils.getTailoringLevel()
 end
 
 -- function TailoringBuff_Utils.hexToRGBFloats(hex)
@@ -249,6 +253,5 @@ function TailoringBuff_Utils.openFavoritesColorPicker(initialColor, target, onPi
 
     Events.OnKeyPressed.Add(onGlobalKeyPressed)
 end
-
 
 return TailoringBuff_Utils
