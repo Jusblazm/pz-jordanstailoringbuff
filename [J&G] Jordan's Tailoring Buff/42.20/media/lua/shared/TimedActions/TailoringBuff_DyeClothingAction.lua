@@ -28,14 +28,22 @@ end
 function TailoringBuff_DyeClothingAction:complete()
     local ok = TailoringBuff_Utils.useDrainable(self.character, "Base.DyePack", 1)
     if not ok then return false end
-    
-    -- local color = Color.new(self.r, self.g, self.b, 1)
-    -- self.item:setColor(color)
-    -- self.item:setCustomColor(true)
 
+    local color = Color.new(self.r, self.g, self.b, 1)
     local color2 = ImmutableColor.new(self.r, self.g, self.b, 1)
+
+    self.item:setColorRed(self.r)
+    self.item:setColorGreen(self.g)
+    self.item:setColorBlue(self.b)
+    self.item:setColor(color)
+
     self.item:getVisual():setTint(color2)
-    -- self.item:synchWithVisual()
+
+    self.item:setCustomColor(true)
+
+    if self.character:isEquipped(self.item) then
+        self.character:resetModelNextFrame()
+    end
 
     self.item:syncItemFields()
     syncItemModData(self.character, self.item)
