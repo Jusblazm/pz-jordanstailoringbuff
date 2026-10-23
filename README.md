@@ -51,4 +51,4 @@ Translations are provided by AI for your benefit. There are bound to be some err
 ## Support
 Join Jordanal's support server at: https://discord.gg/Sx3xzFXQZc \
 Come find me on discord! Be sure to grab the Project Zomboid Modding Role once you arrive.\
-[![Discord](https://raw.githubusercontent.com/Jusblazm/pz-archive/refs/heads/main/_imgs/discordinvite.png)](https://discord.gg/yqstRpuGXy)
+[![Discord](https://raw.githubusercontent.com/Jusblazm/pz-archive/refs/heads/main/_imgs/discordinvite.png)](https://discord.gg/gCqrVTBHSQ)
